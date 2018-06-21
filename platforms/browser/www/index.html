@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>solemne2</title>
+   	<meta http-equiv="content-type" content="text/html; charset=utf-8">
+  	<meta name="viewport" content="width=device-width, initial-scale=1">
+  	<link rel="stylesheet" href="themes/file1.min.css" />
+  	<link rel="stylesheet" href="themes/jquery.mobile.icons.min.css" />
+  	<link rel="stylesheet" href="themes/jquery.mobile.structure-1.4.5.min.css" />
+  	<script type="text/javascript" charset="utf-8" src="cordova.js"></script>
+  	<script src="js/jquery-1.8.3.min.js" type="text/javascript" ></script>
+  	<script src="js/jquery.mobile-1.4.5.min.js"></script>
+	<script src="js/funciones.js"></script>
+	<script type="text/javascript" src="js/jquery.blockUI.js"></script>
+  	<link rel="stylesheet" type="text/css" href="css/style.css" />
+  	<script type="text/javascript" charset="utf-8">    
+</script>
+</head>
+
+<body>
+  <div data-role="page"> 
+    <div data-role="header">
+    </div>
+		<div data-role="content" role="main">
+			<button class="botonlugares" type="button" value="Locales" data-role="none">
+				BIENVENIDO!
+			</button>
+
+			<div data-role="fieldcontain" style="text-align: center;">
+				<img style="display:none;width:120px;height:120px;" id="largeImage" src="" />
+				Nombres:<input id="nombres" placeholder="claudio" name="nombres" type="text" class="ui-input-text ui-body-c"  />
+				Apellidos:<input id="apellidos" placeholder="Flores" name="apellidos" type="text" class="ui-input-text ui-body-c"  /> 
+				Rut:<input id="rut" placeholder="123456789" name="rut" type="text" class="ui-input-text ui-body-c"  /> 
+				Edad:<input id="edad" placeholder="25" name="edad" type="text" class="ui-input-text ui-body-c"  />
+				Sexo:<select name="sexo">
+					<option value="masculino">Masculino</option>
+					<option value="femenino">Femenino</option>
+					<option value="otro">Otro</option>
+				</select>
+				E-mail:<input id="email" placeholder="xx@xx.xx" name="email" type="text" class="ui-input-text ui-body-c"  /> 
+				Fono:<input id="fono" placeholder="1234567" name="fono" type="text" class="ui-input-text ui-body-c"  /> 
+				Carrera:<input id="carrera" placeholder="Ing. en Informatica" name="carrera" type="text" class="ui-input-text ui-body-c"  /> 
+				*mapa* Sede:<div id="map"></div><p><time id="tiempo" datetime="2018-06-12"></p>
+				<div class="searchContainer">
+          <label for="address" class="lblCustom">Dirección a buscar</label>
+          <input type="text" name="address" class="inputCustom" id="address" value="Antonio Varas 880, Providencia">
+        </div>
+        <input type="button" class="btnPrimary" id="btnSearch" value="Buscar">
+				<script>
+					var d = document.getElementById("tiempo").dateTime;
+    			document.getElementById("tiempoM").innerHTML = d;
+				</script>
+				<button class="observacionproducto"  type="button" value="Localesbutton" id="Localesbutton" data-role="none" onclick="clearCache();getImage();" style="width: 75%">Tomar Foto</button>
+
+				<button class="botonlugares2" value="gallery" data-role="none" onclick="clearCache();getImage(pictureSource.PHOTOLIBRARY);">Obtener Foto desde Galeria</button>
+			</div>      
+			<!-- depreca2<button class="botonlugares23" value="Locales" data-role="none" onclick="enviaFoto();">
+				Enviar Imagen
+			</button>-->
+			<button id="login" class="w-auto mx-auto bg-transparent hover:bg-grey-light text-grey-dark font-semibold hover:text-white p-2 m-4 m-t-6 border border-grey hover:border-transparent rounded">Ingresar</button>
+			<p id="tiempoM" name=""></p>
+			<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBirZDzIszIW5KUCbtDhtwQIUogpjncM3s&callback=initMap" async defer></script>
+		</div>
+  </div> 
+</body>
+</html>

@@ -1,0 +1,49 @@
+{
+  "prepare_queue": {
+    "installed": [],
+    "uninstalled": []
+  },
+  "config_munge": {
+    "files": {}
+  },
+  "installed_plugins": {
+    "cordova-plugin-camera": {
+      "PACKAGE_NAME": "subirfoto.frivase.unab"
+    },
+    "cordova-plugin-splashscreen": {
+      "PACKAGE_NAME": "subirfoto.frivase.unab"
+    },
+    "cordova-plugin-dialogs": {
+      "PACKAGE_NAME": "subirfoto.frivase.unab"
+    },
+    "cordova-plugin-file": {
+      "PACKAGE_NAME": "subirfoto.frivase.unab"
+    },
+    "cordova-plugin-file-transfer": {
+      "PACKAGE_NAME": "subirfoto.frivase.unab"
+    },
+    "cordova-plugin-whitelist": {
+      "PACKAGE_NAME": "subirfoto.frivase.unab"
+    },
+    "cordova-plugin-googlemaps": {
+      "API_KEY_FOR_ANDROID": "AIzaSyBqBOV4X2RJ4mAu92iEeblXyU6UsT8fw9I",
+      "PLAY_SERVICES_VERSION": "15.0.1",
+      "ANDROID_SUPPORT_V4_VERSION": "26.1.0",
+      "PACKAGE_NAME": "subirfoto.frivase.unab"
+    },
+    "cordova-background-geolocation-lt": {
+      "LICENSE": "YOUR_LICENSE_KEY",
+      "GOOGLE_API_VERSION": "11.8.0",
+      "APPCOMPAT_VERSION": "27.0.0",
+      "PACKAGE_NAME": "subirfoto.frivase.unab"
+    },
+    "cordova-sqlite-storage": {
+      "PACKAGE_NAME": "subirfoto.frivase.unab"
+    }
+  },
+  "dependent_plugins": {
+    "cordova-plugin-background-fetch": {
+      "PACKAGE_NAME": "subirfoto.frivase.unab"
+    }
+  }
+}

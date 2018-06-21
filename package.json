@@ -1,0 +1,61 @@
+{
+    "name": "helloworld",
+    "displayName": "HelloCordova",
+    "version": "1.0.0",
+    "description": "A sample Apache Cordova application that responds to the deviceready event.",
+    "main": "index.js",
+    "scripts": {
+        "test": "echo \"Error: no test specified\" && exit 1"
+    },
+    "author": "Apache Cordova Team",
+    "license": "Apache-2.0",
+    "dependencies": {
+        "cordova-android": "^7.0.0",
+        "cordova-background-geolocation-lt": "^2.12.2",
+        "cordova-browser": "^5.0.3",
+        "cordova-plugin-background-fetch": "^5.4.1",
+        "cordova-plugin-camera": "^2.4.1",
+        "cordova-plugin-compat": "^1.2.0",
+        "cordova-plugin-dialogs": "^1.3.4",
+        "cordova-plugin-file": "^4.3.3",
+        "cordova-plugin-file-transfer": "^1.6.3",
+        "cordova-plugin-googlemaps": "^2.3.6",
+        "cordova-plugin-splashscreen": "^4.0.3",
+        "cordova-plugin-whitelist": "^1.3.3",
+        "cordova-sqlite-storage": "^2.3.2",
+        "minimist": "^1.2.0",
+        "xml2js": "^0.4.19"
+    },
+    "cordova": {
+        "plugins": {
+            "cordova-plugin-camera": {},
+            "cordova-plugin-splashscreen": {},
+            "cordova-plugin-dialogs": {},
+            "cordova-plugin-file": {},
+            "cordova-plugin-file-transfer": {},
+            "cordova-plugin-whitelist": {},
+            "cordova-plugin-googlemaps": {
+                "API_KEY_FOR_ANDROID": "AIzaSyBqBOV4X2RJ4mAu92iEeblXyU6UsT8fw9I",
+                "API_KEY_FOR_IOS": "AIzaSyBqBOV4X2RJ4mAu92iEeblXyU6UsT8fw9I",
+                "PLAY_SERVICES_VERSION": "15.0.1",
+                "ANDROID_SUPPORT_V4_VERSION": "26.1.0",
+                "LOCATION_WHEN_IN_USE_DESCRIPTION": "This app wants to get your location while this app runs only.",
+                "LOCATION_ALWAYS_USAGE_DESCRIPTION": "This app wants to get your location always, even this app runs in background."
+            },
+            "cordova-background-geolocation-lt": {
+                "LICENSE": "YOUR_LICENSE_KEY",
+                "GOOGLE_API_VERSION": "11.8.0",
+                "APPCOMPAT_VERSION": "27.0.0",
+                "BACKGROUND_MODE_LOCATION": "<string>location</string>",
+                "LOCATION_ALWAYS_AND_WHEN_IN_USE_USAGE_DESCRIPTION": "Always use is required for constant background location-tracking",
+                "LOCATION_ALWAYS_USAGE_DESCRIPTION": "Background location-tracking is required",
+                "LOCATION_WHEN_IN_USE_USAGE_DESCRIPTION": "Background location-tracking is required",
+                "MOTION_USAGE_DESCRIPTION": "Using the accelerometer increases battery-efficiency by intelligently toggling location-tracking only when the device is detected to be moving"
+            },
+            "cordova-sqlite-storage": {}
+        },
+        "platforms": [
+            "browser"
+        ]
+    }
+}
