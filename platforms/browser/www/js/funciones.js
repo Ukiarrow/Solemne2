@@ -5,7 +5,7 @@ var destinationType; // sets the format of returned value
 var d = new Date();
 var perfil_alumno;
 var location;
-var map, maxlat, maxlng, minlat, minlng, minDate, dt;
+var map, maxlat, maxlng, minlat, minlng, minDate, dt,latlon;
 var markers =[];
 var dataset = [];
 var dataBase = []; /* array2 */
@@ -239,10 +239,26 @@ function initMap() {
         center: {lat: -33.4726900, lng: -70.6472400},
         zoom: 15
     })
-    var geocoder = new google.maps.Geocoder();
-    document.getElementById('btnSearch').addEventListener('click', function(){
-        changeAddress(geocoder, map);
-    });
+    infoWindow = new google.maps.InfoWindow;
+    
+    // Try HTML5 geolocation.
+    if (navigator.geolocation) {
+        navigator.geolocation.getCurrentPosition(function(position) {
+        var pos = {
+            lat: position.coords.latitude,
+            lng: position.coords.longitude
+        };
+
+        infoWindow.setPosition(pos);
+        infoWindow.setContent('Location found.');
+        infoWindow.open(map);
+        map.setCenter(pos);
+        }, function() {
+        handleLocationError(true, infoWindow, map.getCenter());
+        });
+    }else {// Browser doesn't support Geolocation
+        handleLocationError(false, infoWindow, map.getCenter());
+    }
     
     
 };

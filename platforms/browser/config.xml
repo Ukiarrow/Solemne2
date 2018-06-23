@@ -2,7 +2,7 @@
 <widget id="subirfoto.frivase.unab" version="1.0.1" xmlns="http://www.w3.org/ns/widgets" xmlns:cdv="http://cordova.apache.org/ns/1.0" xmlns:gap="http://phonegap.com/ns/1.0">
     <name>Solemne2</name>
     <description>
-app solemne test
+solemne2 aplicacion
 </description>
     <author email="f.rivasescobar@uandresbello.edu" href="http://www.unab.cl">
 Felipe Rivas E.
@@ -27,6 +27,8 @@ Felipe Rivas E.
     <gap:splash gap:density="hdpi" gap:platform="android" src="splashes/android/hdpi.png" />
     <gap:splash gap:density="xhdpi" gap:platform="android" src="splashes/android/xhdpi.png" />
     <access origin="http://72.14.183.67/ws/*" />
+    <access origin="http://*.google.com" />
+    <access origin="*" />
     <preference name="target-device" value="universal" />
     <preference name="orientation" value="both" />
     <preference name="exit-on-suspend" value="true" />
