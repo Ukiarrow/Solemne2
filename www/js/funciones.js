@@ -212,7 +212,7 @@ document.addEventListener('deviceready', function(){
     }
 }, false);
 
-function getQR(perfil) {
+function getQR(perfil) {//lectura del codigo QR
     $.ajax({
         type: 'POST',
         url: 'http://72.14.183.67/ws/s2/qr.php ',
@@ -241,7 +241,7 @@ function initMap() {
     })
     infoWindow = new google.maps.InfoWindow;
     
-    // Try HTML5 geolocation.
+    // Try HTML5 geolocation. se cambia la forma de obtener el mapa, infowindows obtiene la ubicacion.
     if (navigator.geolocation) {
         navigator.geolocation.getCurrentPosition(function(position) {
         var pos = {
@@ -276,6 +276,7 @@ function changeAddress(geocoder, map) {
                 map: map,
                 position: results[0].geometry.location
             }));
+            //rango de zoom del mapa
             maxlat = ( results[0].geometry.location.lat() + 1); 
             maxlng = ( results[0].geometry.location.lng() + 1); 
             minlat = ( results[0].geometry.location.lat() - 1); 
